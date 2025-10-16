@@ -1,0 +1,127 @@
+/* Brand */
+:root{
+  --burgundy:#5A0A0A;
+  --burgundy-dark:#3b0404;
+  --gold:#F0C878;
+  --cream:#F7F1E8;
+  --text:#2b211d;
+  --max:1200px;
+  --radius:12px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;color:var(--text);background:var(--cream);line-height:1.55}
+.container{max-width:var(--max);margin:0 auto;padding:0 1.25rem}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:50;background:var(--burgundy);color:var(--gold);border-bottom:1px solid rgba(245,199,126,.2)}
+.header-inner{height:84px;display:flex;align-items:center;gap:1rem}
+.brand-only{display:flex;align-items:center}
+.logo{height:64px}
+.nav{margin-left:auto;display:flex;align-items:center;gap:1.25rem}
+.nav a{color:var(--gold);text-decoration:none;font-weight:600}
+/* top-right CTA: gold background with burgundy letters */
+.btn-cta{background:var(--gold);color:var(--burgundy);padding:.6rem 1rem;border-radius:12px;font-weight:800}
+.menu-toggle{display:none;margin-left:auto;background:transparent;border:0;color:var(--gold);font-size:1.3rem}
+
+/* Hero */
+.hero{position:relative;min-height:86vh;display:flex;align-items:center;color:var(--gold)}
+.hero-warm .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(.98) contrast(.98)}
+.hero-content{position:relative;z-index:1;width:100%}
+.hero-content.center{max-width:980px;text-align:center;margin:0 auto}
+/* Massive logo: dramatically larger than the title on desktop */
+.hero-mark.massive{width:min(260px,30vw);display:block;margin:0 auto 1rem auto}
+.display{font-family:"Playfair Display",serif;font-size:clamp(34px,5.5vw,64px);line-height:1.05;margin:.2rem auto 1.2rem auto}
+
+/* Buttons */
+.btn{display:inline-block;padding:.9rem 1.3rem;border-radius:12px;text-decoration:none;font-weight:800}
+.btn-primary{background:var(--gold);color:var(--burgundy)}
+.btn-ghost{border:1px solid rgba(240,200,120,.85);color:var(--gold);background:transparent}
+
+/* Sections */
+.section{padding:4rem 0}
+.section-title{font-family:"Playfair Display",serif;color:var(--burgundy);font-size:clamp(22px,3.2vw,34px);margin:0 0 .35rem;text-align:center}
+.section-sub{color:#574a44;text-align:center;margin:0 0 2rem}
+.section-title.gold{color:var(--gold)} .gold-sub{color:rgba(245,199,126,.9)}
+
+/* About */
+.our-story-title{font-family:"Playfair Display",serif;color:var(--burgundy);font-size:clamp(26px,3vw,36px);margin:0 0 .4rem}
+.gold-line{width:80px;height:3px;background:var(--gold);border-radius:3px;margin:.3rem 0 1rem}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+.about-media img{width:100%;display:block;border-radius:var(--radius)}
+.bullets{list-style:none;padding:0;margin:1rem 0 0;display:grid;gap:.5rem}
+.bullets li{background:linear-gradient(90deg,rgba(245,199,126,.1),rgba(245,199,126,.03));padding:.6rem .9rem;border-radius:8px}
+
+/* Expertise */
+.expertise{background:linear-gradient(180deg,var(--burgundy),var(--burgundy-dark))}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.card{background:#fff;border-radius:12px;overflow:hidden;border:1px solid #eee;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.card img{width:100%;height:190px;object-fit:cover}
+.card-body{padding:1rem}
+.card h3{margin:.2rem 0 .35rem;font-family:"Playfair Display",serif;color:var(--burgundy)}
+
+/* Venues */
+.venues .venue-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.venue{position:relative;overflow:hidden;border-radius:12px}
+.venue img{width:100%;height:220px;object-fit:cover;display:block}
+.venue figcaption{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(180deg,transparent,rgba(0,0,0,.55));color:#fff;padding:1rem}
+.venue h4{margin:0 0 .2rem;font-family:"Playfair Display",serif}
+
+/* Menus */
+.menus{background:linear-gradient(180deg,var(--burgundy-dark),var(--burgundy))}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.menu-item{position:relative;border-radius:12px;overflow:hidden}
+.menu-item img{width:100%;height:240px;object-fit:cover;display:block}
+.menu-item figcaption{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(180deg,transparent,rgba(0,0,0,.55));color:#fff;padding:1rem}
+.menu-item h4{margin:0 0 .2rem;font-family:"Playfair Display",serif}
+.menu-download{text-align:center;margin-top:1rem}
+
+/* Gallery */
+.gallery{background:linear-gradient(180deg,var(--burgundy-dark),var(--burgundy))}
+.gallery .masonry{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.gallery img{width:100%;height:210px;object-fit:cover;border-radius:8px}
+
+/* Contact */
+.contact-gold{background:var(--gold);color:var(--burgundy)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
+.contact-info a{color:var(--burgundy);font-weight:700;text-decoration:underline}
+.contact-list{list-style:none;padding:0;margin:.5rem 0 1rem;display:grid;gap:.4rem}
+.contact-form{background:#fff;padding:1rem;border-radius:12px;border:1px solid #eee;box-shadow:0 10px 28px rgba(0,0,0,.06)}
+.field{display:flex;flex-direction:column;gap:.35rem;margin-bottom:.9rem}
+label{font-size:.92rem}
+input,textarea{padding:.65rem .75rem;border:1px solid #e8e2dd;border-radius:8px;font-size:1rem}
+.cta-note{letter-spacing:.15em;font-weight:800}
+
+/* Footer */
+.site-footer{background:var(--burgundy);color:var(--gold);padding:1.25rem 0}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.footer-mark{height:44px}
+.socials a{color:var(--gold);text-decoration:none;font-weight:600}
+
+/* Responsive adjustments for logo vs. title */
+@media (max-width:900px){
+  .hero-mark.massive{width:min(200px,35vw)}
+}
+@media (max-width:600px){
+  .logo{height:52px}
+  .hero-mark.massive{width:min(160px,42vw)}
+  .display{font-size:clamp(28px,8vw,40px)}
+}
+@media (max-width:1100px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .venue-grid{grid-template-columns:repeat(2,1fr)}
+  .menu-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery .masonry{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:780px){
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .menu-toggle{display:block}
+  .nav{display:none}
+  .nav.open{position:absolute;right:1rem;top:84px;display:flex;flex-direction:column;gap:.75rem;background:var(--burgundy);padding:.75rem;border:1px solid rgba(245,199,126,.2);border-radius:10px}
+}
+@media (max-width:520px){
+  .cards{grid-template-columns:1fr}
+  .venue-grid{grid-template-columns:1fr}
+  .menu-grid{grid-template-columns:1fr}
+  .gallery .masonry{grid-template-columns:1fr}
+}
